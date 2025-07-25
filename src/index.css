@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@theme {
+  --font-philosopher: "Philosopher", sans-serif;
+  --font-mulish: "Mulish", sans-serif;
+}
