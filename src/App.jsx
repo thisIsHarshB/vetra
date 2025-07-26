@@ -1,9 +1,11 @@
+import Header from "./components/Header";
+import NoteCard from "./components/NoteCard";
+
 function App() {
   return (
     <div className="font-mulish">
-      <h1 className="text-4xl font-bold text-center mt-10 font-philosopher">
-        Hello Vetra!
-      </h1>
+      <Header/>
+      <NoteCard/>
     </div>
   )
 }
