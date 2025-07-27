@@ -1,11 +1,8 @@
-import { LayoutGrid, Info } from "lucide-react";
+import { LayoutGrid, Info, PlusCircleIcon } from "lucide-react";
 
-function Header() {
+function Header(props) {
     return (
-        // Changed to bg-base-300, a standard DaisyUI color
         <div className="navbar bg-base-300 rounded-b-lg shadow-lg">
-
-            {/* navbar-start is the direct parent now */}
             <div className="navbar-start">
                 <div className="tooltip tooltip-right" data-tip="About Vetra">
                     <div className="btn btn-ghost btn-circle hover:bg-base-200">
@@ -17,9 +14,12 @@ function Header() {
             <div className="navbar-center">
                 <a href="/" className="link no-underline font-philosopher text-2xl text-primary">Vetra</a>
             </div>
-
-            {/* navbar-end is the direct parent now */}
             <div className="navbar-end">
+                <div className="tooltip tooltip-left" data-tip="Add Note">
+                    <div className="btn btn-ghost btn-square hover:bg-base-200 mr-5">
+                        <PlusCircleIcon className="text-secondary" onClick={props.addNotes}/>
+                    </div>
+                </div>
                 <div className="tooltip tooltip-left" data-tip="Rearrange Notes">
                     <div className="btn btn-ghost btn-square hover:bg-base-200">
                         <LayoutGrid className="text-secondary"/>
